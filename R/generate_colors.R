@@ -32,7 +32,16 @@ colors <- c(
 )
 
 #Colors for light theme
-purrr::map_chr(colors, colorspace::lighten, 0.15)
+stringr::str_to_lower(
+	purrr::map_chr(colors, colorspace::lighten, 0.15)
+)
 
-# Colors for dark theme
-purrr::map_chr(colors, colorspace::lighten, 0.4)
+# Bright colors
+stringr::str_to_lower(
+	purrr::map_chr(colors, colorspace::lighten, 0.35)
+)
+
+#Colors for dark theme
+stringr::str_to_lower(
+	purrr::map_chr(colors, colorspace::lighten, 0.5)
+)
